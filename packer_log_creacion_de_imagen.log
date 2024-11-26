@@ -1,0 +1,510 @@
+cybercharly@aquiles:~/GIT/UNIR/madeo05_act1/packer:[main !?]: packer build -var-file=vars-x86.pkrvars.hcl PackerBaseImage.pkr.hcl
+madeo05-act1-packer.amazon-ebs.amazon_linux: output will be in this color.
+
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Prevalidating any provided VPC information
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Prevalidating AMI Name: PackerBaseImage--11262024
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Found Image ID: ami-09e4ba81d75ebeb6a
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Creating temporary keypair: packer_67453cdd-3862-5e7b-8f09-67976fe5a635
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Creating temporary security group for this instance: packer_67453cdf-25ad-d2fa-8434-4a757284983b
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Launching a source AWS instance...
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Instance ID: i-0762aeec7f6781b90
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Waiting for instance (i-0762aeec7f6781b90) to become ready...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Using SSH communicator to connect: 35.153.70.71
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Waiting for SSH to become available...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Connected to SSH!
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Provisioning with shell script: post-install.sh
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Existing lock /var/run/yum.pid: another copy is running as pid 2305.
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory :  35 M RSS (331 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:13:57 2024 - 00:06 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Sleeping, pid: 2305
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory :  35 M RSS (331 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:13:57 2024 - 00:08 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Sleeping, pid: 2305
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory :  35 M RSS (331 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:13:57 2024 - 00:10 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Sleeping, pid: 2305
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory :  38 M RSS (333 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:13:57 2024 - 00:12 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2305
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory :  37 M RSS (332 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:13:57 2024 - 00:14 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2305
+    madeo05-act1-packer.amazon-ebs.amazon_linux: No packages marked for update
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Installing Nginx...
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   2  httpd_modules            available    [ =1.0  =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   3  memcached1.5             available    \
+    madeo05-act1-packer.amazon-ebs.amazon_linux:         [ =1.5.1  =1.5.16  =1.5.17 ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   9  R3.4                     available    [ =3.4.3  =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  10  rust1                    available    \
+    madeo05-act1-packer.amazon-ebs.amazon_linux:         [ =1.22.1  =1.26.0  =1.26.1  =1.27.2  =1.31.0  =1.38.0
+    madeo05-act1-packer.amazon-ebs.amazon_linux:           =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  18  libreoffice              available    \
+    madeo05-act1-packer.amazon-ebs.amazon_linux:         [ =5.0.6.2_15  =5.3.6.1  =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  19  gimp                     available    [ =2.8.22 ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  20 †docker=latest            enabled      \
+    madeo05-act1-packer.amazon-ebs.amazon_linux:         [ =17.12.1  =18.03.1  =18.06.1  =18.09.9  =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  21  mate-desktop1.x          available    \
+    madeo05-act1-packer.amazon-ebs.amazon_linux:         [ =1.19.0  =1.20.0  =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  22  GraphicsMagick1.3        available    \
+    madeo05-act1-packer.amazon-ebs.amazon_linux:         [ =1.3.29  =1.3.32  =1.3.34  =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  24  epel                     available    [ =7.11  =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  25  testing                  available    [ =1.0  =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  26  ecs                      available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  27 †corretto8                available    \
+    madeo05-act1-packer.amazon-ebs.amazon_linux:         [ =1.8.0_192  =1.8.0_202  =1.8.0_212  =1.8.0_222  =1.8.0_232
+    madeo05-act1-packer.amazon-ebs.amazon_linux:           =1.8.0_242  =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  32  lustre2.10               available    \
+    madeo05-act1-packer.amazon-ebs.amazon_linux:         [ =2.10.5  =2.10.8  =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  34  lynis                    available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  36  BCC                      available    [ =0.x  =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  37  mono                     available    [ =5.x  =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  38  nginx1=latest            enabled      [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  40  mock                     available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  43  livepatch                available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  45  haproxy2                 available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  46  collectd                 available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  47  aws-nitro-enclaves-cli   available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  48  R4                       available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  49  kernel-5.4               available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  50  selinux-ng               available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  52  tomcat9                  available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  53  unbound1.13              available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  54 †mariadb10.5              available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  55  kernel-5.10              available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  56  redis6                   available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  59 †postgresql13             available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  60  mock2                    available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  61  dnsmasq2.85              available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  62  kernel-5.15              available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  63 †postgresql14             available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  64  firefox                  available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  65  lustre                   available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  67  awscli1                  available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  68 †php8.2                   available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  69  dnsmasq                  available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  70  unbound1.17              available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  72  collectd-python3         available    [ =stable ]
+    madeo05-act1-packer.amazon-ebs.amazon_linux: † Note on end-of-support. Use 'info' subcommand.
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Now you can install:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  # yum clean metadata
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  # yum install nginx
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Existing lock /var/run/yum.pid: another copy is running as pid 2314.
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory : 209 M RSS (430 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:13:58 2024 - 00:22 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2314
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory : 210 M RSS (431 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:13:58 2024 - 00:24 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2314
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory : 210 M RSS (432 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:13:58 2024 - 00:26 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2314
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory : 211 M RSS (432 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:13:58 2024 - 00:28 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2314
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory : 211 M RSS (432 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:13:58 2024 - 00:30 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2314
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory : 212 M RSS (433 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:13:58 2024 - 00:32 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2314
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Resolving Dependencies
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Running transaction check
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package nginx.x86_64 1:1.22.1-1.amzn2.0.4 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: nginx-core = 1:1.22.1-1.amzn2.0.4 for package: 1:nginx-1.22.1-1.amzn2.0.4.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: nginx-filesystem = 1:1.22.1-1.amzn2.0.4 for package: 1:nginx-1.22.1-1.amzn2.0.4.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Running transaction check
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package nginx-core.x86_64 1:1.22.1-1.amzn2.0.4 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: libcrypto.so.1.1(OPENSSL_1_1_0)(64bit) for package: 1:nginx-core-1.22.1-1.amzn2.0.4.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: libssl.so.1.1(OPENSSL_1_1_0)(64bit) for package: 1:nginx-core-1.22.1-1.amzn2.0.4.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: libssl.so.1.1(OPENSSL_1_1_1)(64bit) for package: 1:nginx-core-1.22.1-1.amzn2.0.4.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: libcrypto.so.1.1()(64bit) for package: 1:nginx-core-1.22.1-1.amzn2.0.4.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: libprofiler.so.0()(64bit) for package: 1:nginx-core-1.22.1-1.amzn2.0.4.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: libssl.so.1.1()(64bit) for package: 1:nginx-core-1.22.1-1.amzn2.0.4.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package nginx-filesystem.noarch 1:1.22.1-1.amzn2.0.4 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Running transaction check
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package gperftools-libs.x86_64 0:2.6.1-1.amzn2 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package openssl11-libs.x86_64 1:1.1.1za-1.amzn2.0.1 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: openssl11-pkcs11 for package: 1:openssl11-libs-1.1.1za-1.amzn2.0.1.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Running transaction check
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package openssl11-pkcs11.x86_64 0:0.4.10-6.amzn2.0.1 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Finished Dependency Resolution
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Dependencies Resolved
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ================================================================================
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  Package            Arch     Version                  Repository           Size
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ================================================================================
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Installing:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  nginx              x86_64   1:1.22.1-1.amzn2.0.4     amzn2extra-nginx1    55 k
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Installing for dependencies:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  gperftools-libs    x86_64   2.6.1-1.amzn2            amzn2-core          274 k
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  nginx-core         x86_64   1:1.22.1-1.amzn2.0.4     amzn2extra-nginx1   559 k
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  nginx-filesystem   noarch   1:1.22.1-1.amzn2.0.4     amzn2extra-nginx1    25 k
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  openssl11-libs     x86_64   1:1.1.1za-1.amzn2.0.1    amzn2-core          1.4 M
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  openssl11-pkcs11   x86_64   0.4.10-6.amzn2.0.1       amzn2-core           61 k
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Transaction Summary
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ================================================================================
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Install  1 Package (+5 Dependent packages)
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Total download size: 2.4 M
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Installed size: 6.7 M
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Downloading packages:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --------------------------------------------------------------------------------
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Total                                              1.3 MB/s | 2.4 MB  00:01
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Running transaction check
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Running transaction test
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Transaction test succeeded
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Running transaction
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : 1:nginx-filesystem-1.22.1-1.amzn2.0.4.noarch                 1/6
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : 1:openssl11-libs-1.1.1za-1.amzn2.0.1.x86_64                  2/6
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : openssl11-pkcs11-0.4.10-6.amzn2.0.1.x86_64                   3/6
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : gperftools-libs-2.6.1-1.amzn2.x86_64                         4/6
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : 1:nginx-core-1.22.1-1.amzn2.0.4.x86_64                       5/6
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : 1:nginx-1.22.1-1.amzn2.0.4.x86_64                            6/6
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : 1:nginx-core-1.22.1-1.amzn2.0.4.x86_64                       1/6
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : gperftools-libs-2.6.1-1.amzn2.x86_64                         2/6
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : openssl11-pkcs11-0.4.10-6.amzn2.0.1.x86_64                   3/6
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : 1:openssl11-libs-1.1.1za-1.amzn2.0.1.x86_64                  4/6
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : 1:nginx-1.22.1-1.amzn2.0.4.x86_64                            5/6
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : 1:nginx-filesystem-1.22.1-1.amzn2.0.4.noarch                 6/6
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Installed:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   nginx.x86_64 1:1.22.1-1.amzn2.0.4
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Dependency Installed:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   gperftools-libs.x86_64 0:2.6.1-1.amzn2
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   nginx-core.x86_64 1:1.22.1-1.amzn2.0.4
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   nginx-filesystem.noarch 1:1.22.1-1.amzn2.0.4
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   openssl11-libs.x86_64 1:1.1.1za-1.amzn2.0.1
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   openssl11-pkcs11.x86_64 0:0.4.10-6.amzn2.0.1
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Complete!
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Created symlink from /etc/systemd/system/multi-user.target.wants/nginx.service to /usr/lib/systemd/system/nginx.service.
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Installing Node.js...
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Package 1:make-3.82-24.amzn2.x86_64 already installed and latest version
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Resolving Dependencies
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Running transaction check
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package gcc-c++.x86_64 0:7.3.1-17.amzn2 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: gcc(x86-64) = 7.3.1-17.amzn2 for package: gcc-c++-7.3.1-17.amzn2.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: libmpc.so.3()(64bit) for package: gcc-c++-7.3.1-17.amzn2.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: libmpfr.so.4()(64bit) for package: gcc-c++-7.3.1-17.amzn2.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Running transaction check
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package gcc.x86_64 0:7.3.1-17.amzn2 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: cpp = 7.3.1-17.amzn2 for package: gcc-7.3.1-17.amzn2.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: glibc-devel >= 2.2.90-12 for package: gcc-7.3.1-17.amzn2.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: libatomic >= 7.3.1-17.amzn2 for package: gcc-7.3.1-17.amzn2.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: libcilkrts >= 7.3.1-17.amzn2 for package: gcc-7.3.1-17.amzn2.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: libitm >= 7.3.1-17.amzn2 for package: gcc-7.3.1-17.amzn2.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: libmpx >= 7.3.1-17.amzn2 for package: gcc-7.3.1-17.amzn2.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: libquadmath >= 7.3.1-17.amzn2 for package: gcc-7.3.1-17.amzn2.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: libsanitizer >= 7.3.1-17.amzn2 for package: gcc-7.3.1-17.amzn2.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package libmpc.x86_64 0:1.0.1-3.amzn2.0.2 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package mpfr.x86_64 0:3.1.1-4.amzn2.0.2 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Running transaction check
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package cpp.x86_64 0:7.3.1-17.amzn2 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package glibc-devel.x86_64 0:2.26-64.amzn2.0.2 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: glibc-headers = 2.26-64.amzn2.0.2 for package: glibc-devel-2.26-64.amzn2.0.2.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: glibc-headers for package: glibc-devel-2.26-64.amzn2.0.2.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package libatomic.x86_64 0:7.3.1-17.amzn2 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package libcilkrts.x86_64 0:7.3.1-17.amzn2 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package libitm.x86_64 0:7.3.1-17.amzn2 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package libmpx.x86_64 0:7.3.1-17.amzn2 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package libquadmath.x86_64 0:7.3.1-17.amzn2 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package libsanitizer.x86_64 0:7.3.1-17.amzn2 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Running transaction check
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package glibc-headers.x86_64 0:2.26-64.amzn2.0.2 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: kernel-headers >= 2.2.1 for package: glibc-headers-2.26-64.amzn2.0.2.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Processing Dependency: kernel-headers for package: glibc-headers-2.26-64.amzn2.0.2.x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Running transaction check
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package kernel-headers.x86_64 0:4.14.355-271.569.amzn2 will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Finished Dependency Resolution
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Dependencies Resolved
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ================================================================================
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  Package            Arch       Version                     Repository      Size
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ================================================================================
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Installing:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  gcc-c++            x86_64     7.3.1-17.amzn2              amzn2-core      13 M
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Installing for dependencies:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  cpp                x86_64     7.3.1-17.amzn2              amzn2-core     9.2 M
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  gcc                x86_64     7.3.1-17.amzn2              amzn2-core      22 M
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  glibc-devel        x86_64     2.26-64.amzn2.0.2           amzn2-core     995 k
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  glibc-headers      x86_64     2.26-64.amzn2.0.2           amzn2-core     516 k
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  kernel-headers     x86_64     4.14.355-271.569.amzn2      amzn2-core     1.2 M
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  libatomic          x86_64     7.3.1-17.amzn2              amzn2-core      46 k
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  libcilkrts         x86_64     7.3.1-17.amzn2              amzn2-core      85 k
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  libitm             x86_64     7.3.1-17.amzn2              amzn2-core      85 k
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  libmpc             x86_64     1.0.1-3.amzn2.0.2           amzn2-core      52 k
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  libmpx             x86_64     7.3.1-17.amzn2              amzn2-core      52 k
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  libquadmath        x86_64     7.3.1-17.amzn2              amzn2-core     189 k
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  libsanitizer       x86_64     7.3.1-17.amzn2              amzn2-core     642 k
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  mpfr               x86_64     3.1.1-4.amzn2.0.2           amzn2-core     208 k
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Transaction Summary
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ================================================================================
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Install  1 Package (+13 Dependent packages)
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Total download size: 48 M
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Installed size: 135 M
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Downloading packages:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --------------------------------------------------------------------------------
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Total                                               16 MB/s |  48 MB  00:02
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Running transaction check
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Running transaction test
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Transaction test succeeded
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Running transaction
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : mpfr-3.1.1-4.amzn2.0.2.x86_64                               1/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : libmpc-1.0.1-3.amzn2.0.2.x86_64                             2/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : cpp-7.3.1-17.amzn2.x86_64                                   3/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : kernel-headers-4.14.355-271.569.amzn2.x86_64                4/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : glibc-headers-2.26-64.amzn2.0.2.x86_64                      5/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : glibc-devel-2.26-64.amzn2.0.2.x86_64                        6/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : libcilkrts-7.3.1-17.amzn2.x86_64                            7/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : libquadmath-7.3.1-17.amzn2.x86_64                           8/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : libsanitizer-7.3.1-17.amzn2.x86_64                          9/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : libatomic-7.3.1-17.amzn2.x86_64                            10/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : libitm-7.3.1-17.amzn2.x86_64                               11/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : libmpx-7.3.1-17.amzn2.x86_64                               12/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : gcc-7.3.1-17.amzn2.x86_64                                  13/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : gcc-c++-7.3.1-17.amzn2.x86_64                              14/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : glibc-headers-2.26-64.amzn2.0.2.x86_64                      1/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : libmpx-7.3.1-17.amzn2.x86_64                                2/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : libitm-7.3.1-17.amzn2.x86_64                                3/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : gcc-c++-7.3.1-17.amzn2.x86_64                               4/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : libatomic-7.3.1-17.amzn2.x86_64                             5/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : libsanitizer-7.3.1-17.amzn2.x86_64                          6/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : glibc-devel-2.26-64.amzn2.0.2.x86_64                        7/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : libquadmath-7.3.1-17.amzn2.x86_64                           8/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : libcilkrts-7.3.1-17.amzn2.x86_64                            9/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : cpp-7.3.1-17.amzn2.x86_64                                  10/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : libmpc-1.0.1-3.amzn2.0.2.x86_64                            11/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : gcc-7.3.1-17.amzn2.x86_64                                  12/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : kernel-headers-4.14.355-271.569.amzn2.x86_64               13/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : mpfr-3.1.1-4.amzn2.0.2.x86_64                              14/14
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Installed:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   gcc-c++.x86_64 0:7.3.1-17.amzn2
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Dependency Installed:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   cpp.x86_64 0:7.3.1-17.amzn2
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   gcc.x86_64 0:7.3.1-17.amzn2
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   glibc-devel.x86_64 0:2.26-64.amzn2.0.2
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   glibc-headers.x86_64 0:2.26-64.amzn2.0.2
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   kernel-headers.x86_64 0:4.14.355-271.569.amzn2
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   libatomic.x86_64 0:7.3.1-17.amzn2
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   libcilkrts.x86_64 0:7.3.1-17.amzn2
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   libitm.x86_64 0:7.3.1-17.amzn2
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   libmpc.x86_64 0:1.0.1-3.amzn2.0.2
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   libmpx.x86_64 0:7.3.1-17.amzn2
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   libquadmath.x86_64 0:7.3.1-17.amzn2
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   libsanitizer.x86_64 0:7.3.1-17.amzn2
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   mpfr.x86_64 0:3.1.1-4.amzn2.0.2
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Complete!
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ================================================================================
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ================================================================================
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:                               DEPRECATION WARNING
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:      Node.js 16.x is no longer actively supported!
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   You will not receive security or critical stability updates for this version.
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   You should migrate to a supported version of Node.js as soon as possible.
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Use the installation script that corresponds to the version of Node.js you
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   wish to install. e.g.
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:    * https://rpm.nodesource.com/setup_16.x — Node.js 16 "Gallium" (deprecated)
+    madeo05-act1-packer.amazon-ebs.amazon_linux:    * https://rpm.nodesource.com/setup_18.x — Node.js 18 "Hydrogen" (Maintenance)
+    madeo05-act1-packer.amazon-ebs.amazon_linux:    * https://rpm.nodesource.com/setup_19.x — Node.js 19 "Nineteen" (deprecated)
+    madeo05-act1-packer.amazon-ebs.amazon_linux:    * https://rpm.nodesource.com/setup_20.x — Node.js 20 LTS "Iron" (recommended)
+    madeo05-act1-packer.amazon-ebs.amazon_linux:    * https://rpm.nodesource.com/setup_21.x — Node.js 21 "Iron" (current)
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Please see https://github.com/nodejs/Release for details about which
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   version may be appropriate for you.
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   The NodeSource Node.js distributions repository contains
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   information both about supported versions of Node.js and supported Linux
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   distributions. To learn more about usage, see the repository:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:    https://github.com/nodesource/distributions
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ================================================================================
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ================================================================================
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Continuing in 10 seconds ...
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: 2024-11-26 03:15:46 - Cleaning up old repositories...
+    madeo05-act1-packer.amazon-ebs.amazon_linux: 2024-11-26 03:15:46 - Old repositories removed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: 2024-11-26 03:15:46 - Supported architecture: x86_64
+    madeo05-act1-packer.amazon-ebs.amazon_linux: 2024-11-26 03:15:46 - yum available, updating...
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Existing lock /var/run/yum.pid: another copy is running as pid 2608.
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory : 172 M RSS (392 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:15:38 2024 - 00:15 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2608
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory : 196 M RSS (416 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:15:38 2024 - 00:17 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2608
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory : 232 M RSS (452 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:15:38 2024 - 00:19 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2608
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory : 209 M RSS (430 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:15:38 2024 - 00:21 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2608
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory : 210 M RSS (431 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:15:38 2024 - 00:23 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2608
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory : 210 M RSS (431 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:15:38 2024 - 00:25 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2608
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory : 210 M RSS (431 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:15:38 2024 - 00:27 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2608
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory : 210 M RSS (432 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:15:38 2024 - 00:29 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2608
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory : 211 M RSS (432 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:15:38 2024 - 00:31 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2608
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Another app is currently holding the yum lock; waiting for it to exit...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:   The other application is: yum
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Memory : 212 M RSS (433 MB VSZ)
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     Started: Tue Nov 26 03:15:38 2024 - 00:33 ago
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:     State  : Running, pid: 2608
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Metadata Cache Created
+    madeo05-act1-packer.amazon-ebs.amazon_linux: 2024-11-26 03:16:15 - Repository is configured and updated. Run 'yum install nodejs -y' to complete the installation.
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Resolving Dependencies
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Running transaction check
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ---> Package nodejs.x86_64 2:16.20.2-1nodesource will be installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: --> Finished Dependency Resolution
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Dependencies Resolved
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ================================================================================
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  Package    Arch       Version                      Repository             Size
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ================================================================================
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Installing:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:  nodejs     x86_64     2:16.20.2-1nodesource        nodesource-nodejs      32 M
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Transaction Summary
+    madeo05-act1-packer.amazon-ebs.amazon_linux: ================================================================================
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Install  1 Package
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Total download size: 32 M
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Installed size: 89 M
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Downloading packages:
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: warning: /var/cache/yum/x86_64/2/nodesource-nodejs/packages/nodejs-16.20.2-1nodesource.x86_64.rpm: Header V4 RSA/SHA512 Signature, key ID 9b1be0b4: NOKEY
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Public key for nodejs-16.20.2-1nodesource.x86_64.rpm is not installed
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Retrieving key from https://rpm.nodesource.com/gpgkey/NODESOURCE-GPG-SIGNING-KEY-EL
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Importing GPG key 0x9B1BE0B4:
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:  Userid     : "NSolid <nsolid-gpg@nodesource.com>"
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:  Fingerprint: 6f71 f525 2828 41ee daf8 51b4 2f59 b5f9 9b1b e0b4
+==> madeo05-act1-packer.amazon-ebs.amazon_linux:  From       : https://rpm.nodesource.com/gpgkey/NODESOURCE-GPG-SIGNING-KEY-EL
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Running transaction check
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Running transaction test
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Transaction test succeeded
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Running transaction
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Installing : 2:nodejs-16.20.2-1nodesource.x86_64                          1/1
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   Verifying  : 2:nodejs-16.20.2-1nodesource.x86_64                          1/1
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Installed:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   nodejs.x86_64 2:16.20.2-1nodesource
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Complete!
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Creating the Node.js application...
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Creating package.json with dummy test script...
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Installing Node.js dependencies...
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Wrote to /home/ec2-user/package.json:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: {
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   "name": "ec2-user",
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   "version": "1.0.0",
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   "main": "app.js",
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   "scripts": {
+    madeo05-act1-packer.amazon-ebs.amazon_linux:     "test": "echo \"test\" && exit 0"
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   },
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   "keywords": [],
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   "author": "",
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   "license": "ISC",
+    madeo05-act1-packer.amazon-ebs.amazon_linux:   "description": ""
+    madeo05-act1-packer.amazon-ebs.amazon_linux: }
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: up to date, audited 1 package in 3s
+    madeo05-act1-packer.amazon-ebs.amazon_linux:
+    madeo05-act1-packer.amazon-ebs.amazon_linux: found 0 vulnerabilities
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Configuring Nginx as a reverse proxy...
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Configuring Node.js to run at startup...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Created symlink from /etc/systemd/system/multi-user.target.wants/nodeapp.service to /etc/systemd/system/nodeapp.service.
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Installation and configuration complete. The application is running on port 80.
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Stopping the source instance...
+    madeo05-act1-packer.amazon-ebs.amazon_linux: Stopping instance
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Waiting for the instance to stop...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Creating AMI PackerBaseImage--11262024 from instance i-0762aeec7f6781b90
+    madeo05-act1-packer.amazon-ebs.amazon_linux: AMI: ami-086216a3ce2ed354c
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Waiting for AMI to become ready...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Skipping Enable AMI deprecation...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Terminating the source AWS instance...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Cleaning up any extra volumes...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: No volumes to clean up, skipping
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Deleting temporary security group...
+==> madeo05-act1-packer.amazon-ebs.amazon_linux: Deleting temporary keypair...
+Build 'madeo05-act1-packer.amazon-ebs.amazon_linux' finished after 7 minutes 38 seconds.
+
+==> Wait completed after 7 minutes 38 seconds
+
+==> Builds finished. The artifacts of successful builds are:
+--> madeo05-act1-packer.amazon-ebs.amazon_linux: AMIs were created:
+us-east-1: ami-086216a3ce2ed354c
